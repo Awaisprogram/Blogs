@@ -9,7 +9,7 @@ import Comment from "@/app//components/Comment";
 import Navigation from "@/app//components/Navigation";
 
 
-const getProjectData = (id) => {
+const getProjectData = (id:string) => {
     
   const blog = blogs.find((p) => p.id === parseInt(id));
   return blog;
