@@ -3,7 +3,7 @@ import Image, { StaticImageData } from 'next/image';
 
 
 interface CardProps {
-  id : number
+  id?: number
   imgSrc : StaticImageData;
   title: string;
   time: string;
