@@ -8,11 +8,22 @@ import News from '@/app//components/News'
 import Comment from "@/app//components/Comment";
 import Navigation from "@/app//components/Navigation";
 
+interface Blogs {
+  id: number;
+  title: string;
+  category: string[];
+  comments: string;
+  description: string;
+  highlights: string;
+  lower: string;
+  bneath: string;
+  image: StaticImageData;
+}
 
-const getProjectData = (id:string) => {
+const getProjectData = (id: string) => {
     
   const blog = blogs.find((p) => p.id === parseInt(id));
-  return blog;
+  return blog as Blogs;
 }
 
 
