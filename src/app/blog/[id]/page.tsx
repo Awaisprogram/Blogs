@@ -9,14 +9,14 @@ import Comment from "@/app//components/Comment";
 import Navigation from "@/app//components/Navigation";
 
 
-const getProjectData = (id: string) => {
+const getProjectData = (id) => {
     
   const blog = blogs.find((p) => p.id === parseInt(id));
   return blog;
 }
 
 
-function blogsdata({ params }: { params: { id: string } }) {
+function blogsdata({ params }: { params: { id } }) {
 
   const blog = getProjectData(params.id);
 
