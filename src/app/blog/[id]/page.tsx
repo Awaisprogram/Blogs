@@ -20,14 +20,15 @@ interface Blogs {
   image: StaticImageData;
 }
 
-const getProjectData = (id: string) => {
+const getProjectData = (id: string): Blogs
+| undefined => {
     
   const blog = blogs.find((p) => p.id === parseInt(id));
-  return blog as Blogs;
+  return blog as Blogs ;
 }
 
 
-function blogsdata({ params }: { params: { id } }) {
+function blogsdata({ params }: { params: { id: string } }) {
 
   const blog = getProjectData(params.id);
 
